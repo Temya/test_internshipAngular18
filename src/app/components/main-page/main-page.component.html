@@ -1,0 +1,23 @@
+<div class="main" *ngIf="state">
+    <div class="header"><h1>Todo List</h1></div>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Text</mat-label>
+          <input type="text" matInput [formControl]="toDoText" placeholder="Something">
+        </mat-form-field>
+        <button (click)="addToDo()" type="button" mat-raised-button>Add</button>
+      </form>
+    <ol><li *ngFor="let item of todos" class="list">
+        <button (click)="deleteToDo(item.id)" mat-raised-button>Delete</button>
+        <button (click)="editToDo(item.id)" mat-raised-button>Edit</button>
+        {{item.todo}} <hr >
+    </li>
+    <li *ngFor="let item of secondToDos" class="list">
+        <button disabled mat-raised-button>Delete</button>
+        <button disabled mat-raised-button>Edit</button>
+        {{item.todo}} <hr >
+    </li>
+</ol>
+</div>
+
+

@@ -1,0 +1,9 @@
+<div class="main">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Text</mat-label>
+          <input type="text" matInput [formControl]="editToDoText" placeholder="Something">
+        </mat-form-field>
+        <button (click)="saveEditToDo()" type="button" mat-raised-button>Save</button>
+      </form>
+</div>
