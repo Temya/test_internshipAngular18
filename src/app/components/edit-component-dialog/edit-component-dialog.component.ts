@@ -2,10 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import {
-  MAT_DIALOG_DATA,
-  MatDialogRef
-} from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BackendService } from '../../services/backend.service';
@@ -18,13 +15,12 @@ import { BackendService } from '../../services/backend.service';
     CommonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   templateUrl: './edit-component-dialog.component.html',
-  styleUrl: './edit-component-dialog.component.scss'
+  styleUrl: './edit-component-dialog.component.scss',
 })
 export class EditComponentDialogComponent {
-
   public editToDoText = new FormControl('');
 
   readonly data = inject<string>(MAT_DIALOG_DATA);
